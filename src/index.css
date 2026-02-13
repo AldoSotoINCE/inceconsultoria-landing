@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+body {
+    @apply bg-ince-gray2;
+}
+
+@theme {
+    --color-ince-blue1: #2A5B85;
+    --color-ince-blue2: #3574A9;
+    --color-ince-blue3: #4698DE;
+    --color-ince-brown1: #AE6239;
+    --color-ince-brown2: #D2875F;
+    --color-ince-brown3: #FFE5DA;
+    --color-ince-gray: #E2E2E2;
+    --color-ince-gray2: #F2F2F2;
+    --color-ince-gray3: #F2F4F9;
+}
