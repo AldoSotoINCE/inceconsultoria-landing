@@ -24,11 +24,11 @@ export default function AboutUs() {
 
     return (
         <section id='Nosotros' className="pt-24">
-            <div className='py-20 text-center'>
+            <div className='py-10 text-center'>
                 <p className='inline-block px-5 py-1.5 text-ince-blue1 border border-ince-blue1 rounded-2xl'>Ingeniería con respaldo normativo</p>
                 <h1 className='py-3 text-5xl'>¿Quiénes<span className='text-ince-blue1'> somos?</span></h1>
             </div>
-            <div className="max-w-400 mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+            <div className="max-w-350 mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
                 {/* IMAGEN */}
                 <div className='order-2 lg:order-1'>
                     <img 
@@ -67,7 +67,7 @@ export default function AboutUs() {
             </div>
 
             <section className="py-12 md:py-36">
-                <div className="max-w-400 mx-auto px-6 grid lg:grid-cols-2 gap-16">
+                <div className="max-w-350 mx-auto px-6 grid lg:grid-cols-2 gap-16">
                     <div className="order-2 lg:order-1 flex flex-col justify-center">
                         <h3 className="text-3xl font-bold mb-6">
                             {activeService.title}

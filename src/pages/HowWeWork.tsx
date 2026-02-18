@@ -91,12 +91,11 @@ export default function HowWeWork() {
   ]
 
   return (
-    <section className="py-10">
-      <div className="max-w-400 lg:350 mx-auto px-6">
-        
+    <section id="Proceso" className="py-24">
+      <div className="max-w-350 lg:350 mx-auto px-6">
         {/* HEADER */}
         <div className="text-center max-w-3xl mx-auto mb-24">
-          <span className="inline-block mb-4 px-4 py-2 text-xs font-semibold tracking-widest text-primary uppercase border border-black/20 rounded-full">
+          <span className="inline-block mb-4 px-4 py-2 text-xs font-semibold tracking-widest text-primary uppercase text-ince-blue1 border border-ince-blue1 rounded-full">
             Nuestra metodología de trabajo
           </span>
 

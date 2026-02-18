@@ -23,7 +23,7 @@ export default function Footer() {
 
         <div className="mt-12 flex items-center gap-6">
             <a
-                href="https://www.facebook.com/"
+                href="https://www.facebook.com/INCETJ"
                 target="_blank"
                 aria-label="Facebook"
                 className=" hover:text-white transition"
@@ -32,7 +32,7 @@ export default function Footer() {
             </a>
 
             <a
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/ince_tj/"
                 target="_blank"
                 aria-label="Instagram"
                 className=" hover:text-white transition"
@@ -41,7 +41,7 @@ export default function Footer() {
             </a>
 
             <a
-                href="https://www.linkedin.com/"
+                href="https://www.linkedin.com/in/ince-ingenier%C3%ADa-770372220/"
                 target="_blank"
                 aria-label="TikTok"
                 className=" hover:text-white transition"
@@ -56,13 +56,6 @@ export default function Footer() {
           <p className="text-xs">
             © {new Date().getFullYear()}, INCE Consultoria
           </p>
-          <a 
-            href="https://aldosoto.dev/"
-            target="_blank"
-            rel="noreferrer"
-            className="text-xs">
-            Website created by: Aldo Soto ↗️
-          </a>
         </div>
       </div>
     </div>

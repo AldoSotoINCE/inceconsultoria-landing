@@ -5,6 +5,7 @@ import Footer from "./pages/Footer"
 import Hero from "./pages/Hero"
 import HowWeWork from "./pages/HowWeWork"
 import NavBar from "./pages/NavBar"
+import Services from "./pages/Services"
 import WhyChooseUs from "./pages/WhyChooseUs"
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <>
         <NavBar/>
         <Hero/>
+        <Services/>
         <AboutUs/>
         <HowWeWork/>
         <WhyChooseUs/>

@@ -23,7 +23,9 @@ export default function NavBar() {
         <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-gray-50 shadow-lg" : "bg-transparent"}`}>
             <nav className='w-full mx-ato flex items-center justify-between lg:px-20 py-5 lg:py-4'>
                 <div className='px-5'>
-                    <img src={logo} alt="logo" className='min-w-20 max-w-42'/>
+                    <a href="#Inicio">
+                        <img src={logo} alt="logo" className='min-w-20 max-w-42'/>
+                    </a>
                 </div>
                 <div className='px-10 py-5 hidden lg:flex items-center gap-5 text-gray-900'>
                     <a href="#Inicio"    className='hover:underline decoration-2 decoration-black/70 underline-offset-8'>Inicio</a>
@@ -34,7 +36,7 @@ export default function NavBar() {
                     <div className='flex gap-2'>
                       <div className='flex items-center justify-center gap-2'>
                         <a
-                          href="https://www.instagram.com/"
+                          href="https://www.instagram.com/ince_tj/"
                           target="_blank"
                           aria-label="Instagram"
                           className="text-ince-blue1 hover:opacity-50 transition-opacity duration-300"
@@ -42,7 +44,7 @@ export default function NavBar() {
                           <FaInstagram size={25} className='text-primary'/>
                         </a>
                         <a
-                          href="https://www.facebook.com/"
+                          href="https://www.facebook.com/INCETJ"
                           target="_blank"
                           aria-label="Facebook"
                           className="text-ince-blue1 hover:opacity-50 transition-opacity duration-300"
@@ -50,7 +52,7 @@ export default function NavBar() {
                           <FaFacebook  size={25} className='text-primary'/>
                         </a>
                         <a
-                          href="https://www.tiktok.com/"
+                          href="https://www.linkedin.com/in/ince-ingenier%C3%ADa-770372220/"
                           target="_blank"
                           aria-label="Linkedin"
                           className="text-ince-blue1 hover:opacity-50 transition-opacity duration-300"
@@ -90,7 +92,7 @@ export default function NavBar() {
                     </ul>
                     <div className='flex items-center justify-center gap-2'>
                         <a
-                          href="https://www.instagram.com/"
+                          href="https://www.instagram.com/ince_tj/"
                           target="_blank"
                           aria-label="Instagram"
                           className="transition"
@@ -98,7 +100,7 @@ export default function NavBar() {
                           <FaInstagram size={25} className='text-ince-blue1'/>
                         </a>
                         <a
-                          href="https://www.facebook.com/"
+                          href="https://www.facebook.com/INCETJ"
                           target="_blank"
                           aria-label="Facebook"
                           className=" transition"
@@ -106,7 +108,7 @@ export default function NavBar() {
                           <FaFacebook  size={25} className='text-ince-blue1'/>
                         </a>
                         <a
-                          href="https://www.linkedin.com/"
+                          href="https://www.linkedin.com/in/ince-ingenier%C3%ADa-770372220/"
                           target="_blank"
                           aria-label="TikTok"
                           className=" transition"
