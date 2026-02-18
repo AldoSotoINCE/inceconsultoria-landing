@@ -19,7 +19,7 @@ const services = [
   {
     id:"04",
     title: "Servicios de consultoría",
-    description:"Brindamos asesoría técnica especializada para la correcta interpretación y aplicación de la normativa. Acompañamos desde la planeación hasta la atención de observaciones, asegurando que tu proyecto cumpla sin contratiempos."
+    description:"Brindamos asesoría técnica especializada para la correcta interpretación y aplicación de la normativa. Acompañamos desde la planeación, asegurando que tu proyecto cumpla sin contratiempos."
   },
 ]
 
@@ -32,7 +32,7 @@ export default function ServicesStack() {
             <p className='inline-block px-5 py-1.5 text-ince-blue1 border border-ince-blue1 rounded-2xl'>Tu seguridad es primero</p>
             <h1 className='py-3 text-5xl'>Nuestros <span className='text-ince-blue1'>servicios</span></h1>
         </div>
-        <div className="max-w-sm md:max-w-350 mx-auto rounded-3xl overflow-hidden border border-black/10">
+        <div className="max-w-sm md:max-w-300 mx-auto rounded-3xl overflow-hidden border border-black/10">
         {services.map((service, index) => {
             const isActive = index === activeIndex;
 

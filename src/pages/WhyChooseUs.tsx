@@ -3,7 +3,7 @@ import whyChooseUsImg from '../assets/imgs/whychooseus_img.jpeg'
 export default function WhyChooseUs() {
   return (
     <section className="py-12 md:py-24">
-      <div className="max-w-350 mx-auto px-6">
+      <div className="max-w-300 mx-auto px-6">
         {/* Grid */}
         <div className="grid md:grid-cols-2 gap-10">
             {/* Header */}
@@ -50,8 +50,7 @@ export default function WhyChooseUs() {
                         Dictámenes claros y precisos
                     </h3>
                     <p className="text-slate-600">
-                        Informes estructurados y listos para trámites ante autoridades,
-                        CFE o aseguradoras.
+                        Informes estructurados y listos para trámites ante autoridades competentes, CFE.
                     </p>
                 </div>
 
