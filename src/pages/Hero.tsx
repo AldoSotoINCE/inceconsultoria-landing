@@ -4,7 +4,7 @@ export default function Hero() {
 
     return (
         <section id='Inicio' className="pt-32 md:pt-52">
-            <div className="max-w-400 mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+            <div className="max-w-350 mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
                 {/* TEXTO */}
                 <div>
                     <h1 className="text-4xl lg:text-5xl font-bold leading-tight mb-6">

@@ -41,13 +41,11 @@ export default function ServicesStack() {
                 key={index}
                 onMouseEnter={() => setActiveIndex(index)}
                 className={`
-                grid grid-cols-[100px_1fr_200px]
-                px-12
-                border-b border-black/10
-                transition-all duration-500
-                ${isActive 
-                    ? "bg-ince-blue1/80 py-14 text-white" 
-                    : "bg-white py-10 hover:bg-black/5"}
+                    grid grid-cols-[100px_1fr_200px]
+                    px-12
+                    border-b border-black/10
+                    transition-all duration-500
+                    ${isActive  ? "bg-ince-blue1/80 py-14 text-white"  : "bg-white py-10 hover:bg-black/5"}
                 `}
             >
                 {/* ID */}
