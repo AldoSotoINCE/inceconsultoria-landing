@@ -1,6 +1,6 @@
 import heroImg from '../assets/imgs/hero_img.jpg'
 export default function Hero() {
-    const waUrl = `https://wa.link/miwsxu`;
+    const waUrl = `https://wa.link/dr41or`;
 
     return (
         <section id='Inicio' className="pt-32 md:pt-52">
