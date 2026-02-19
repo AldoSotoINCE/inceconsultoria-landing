@@ -123,6 +123,14 @@ export default function NavBar() {
                         >
                           <FaLinkedin  size={25} className='text-ince-blue1'/>
                         </a>
+                        <a
+                            href="https://www.tiktok.com/@inceingenieria?lang=mx"
+                            target="_blank"
+                            aria-label="Tiktok"
+                            className="text-ince-blue1 hover:opacity-50 transition-opacity duration-300"
+                        >
+                            <FaTiktok  size={25} className='text-primary'/>
+                        </a>
                     </div>
                 </div>
             </nav>
