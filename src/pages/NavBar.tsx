@@ -4,7 +4,7 @@ import { IoMdCloseCircleOutline } from 'react-icons/io';
 import { RxHamburgerMenu } from "react-icons/rx";
 
 import logo from '../assets/imgs/logo_navbar.png'
-import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaLinkedin, FaTiktok } from 'react-icons/fa';
 
 export default function NavBar() {
     const [open, setOpen] = useState(false);
@@ -58,6 +58,14 @@ export default function NavBar() {
                           className="text-ince-blue1 hover:opacity-50 transition-opacity duration-300"
                         >
                           <FaLinkedin  size={25} className='text-primary'/>
+                        </a>
+                        <a
+                          href="https://www.tiktok.com/@inceingenieria?lang=mx"
+                          target="_blank"
+                          aria-label="Tiktok"
+                          className="text-ince-blue1 hover:opacity-50 transition-opacity duration-300"
+                        >
+                          <FaTiktok  size={25} className='text-primary'/>
                         </a>
                       </div>
                     </div>

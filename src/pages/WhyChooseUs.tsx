@@ -2,7 +2,7 @@ import whyChooseUsImg from '../assets/imgs/whychooseus_img.jpeg'
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-12 md:py-24">
+    <section className="py-12">
       <div className="max-w-300 mx-auto px-6">
         {/* Grid */}
         <div className="grid md:grid-cols-2 gap-10">
@@ -18,7 +18,7 @@ export default function WhyChooseUs() {
                 <img 
                     src={whyChooseUsImg} 
                     alt="" 
-                    className="w-full max-w-md rounded-2xl mt-6"
+                    className="w-full max-w-lg rounded-2xl mt-6 hover:scale-115 transition-transform duration-300"
                 />
             </div>
             <div className="flex flex-col gap-2">

@@ -1,4 +1,4 @@
-import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
+import { FaInstagram, FaFacebook, FaLinkedin, FaTiktok } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -47,6 +47,14 @@ export default function Footer() {
                 className=" hover:text-white transition"
             >    
                 <FaLinkedin size={40}/>       
+            </a>
+            <a
+                href="https://www.tiktok.com/@inceingenieria?lang=mx"
+                target="_blank"
+                aria-label="TikTok"
+                className=" hover:text-white transition"
+            >    
+                <FaTiktok size={40}/>       
             </a>
         </div>
       </div>
