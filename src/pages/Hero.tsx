@@ -3,8 +3,8 @@ export default function Hero() {
     const waUrl = `https://wa.link/dr41or`;
 
     return (
-        <section id='Inicio' className="pt-32 md:pt-52">
-            <div className="max-w-350 mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+        <section id='Inicio' className="pt-32 md:pt-52 bg-linear-to-b from-ince-gray to-white">
+            <div className="max-w-5/6 xl:max-w-3/4 mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
                 {/* TEXTO */}
                 <div>
                     <h1 className="text-4xl lg:text-5xl font-bold leading-tight mb-6">
@@ -18,10 +18,7 @@ export default function Hero() {
 
                     <div className="flex gap-4">
                         <a
-                            href={waUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"    
-                            aria-label="Abrir chat de WhatsApp"
+                            href="#Contacto" 
                             className="px-6 py-3 rounded-lg font-semibold transition text-white bg-ince-blue1 hover:scale-[1.1] hover:cursor-pointer"
                         >
                             Solicitar Verificación

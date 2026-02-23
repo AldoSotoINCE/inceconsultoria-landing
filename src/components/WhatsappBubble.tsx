@@ -1,7 +1,7 @@
 import { FaWhatsapp } from "react-icons/fa"
 
 export default function WhatsappBubble(){
-  const waUrl = `https://wa.me/16644104450?text=Hola,%20necesito%20mas%20informaci%C3%B3n`;
+  const waUrl = `https://wa.link/1j8yjo`;
     return(
         <a 
             href={waUrl}

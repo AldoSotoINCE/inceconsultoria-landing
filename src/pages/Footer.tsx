@@ -2,8 +2,8 @@ import { FaInstagram, FaFacebook, FaLinkedin, FaTiktok } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <div className="bg-ince-gray  mt-5">
-      <div className="mx-auto max-w-7xl px-6 py-16">
+    <div className="mt-5">
+      <div className="mx-auto max-w-7xl px-6 py-5">
         <div className="grid gap-12 md:grid-cols-3">
           <div>
             <h3 className="tracking-widest text-sm font-semibold ">

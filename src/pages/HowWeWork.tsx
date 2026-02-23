@@ -91,8 +91,8 @@ export default function HowWeWork() {
   ]
 
   return (
-    <section id="Proceso" className="py-24">
-      <div className="max-w-300 lg:350 mx-auto px-6">
+    <section id="Proceso" className="py-6 md:py-12 bg-linear-to-t from-ince-gray2 to-white">
+      <div className="max-w-5/6 xl:max-w-3/4 mx-auto px-6">
         {/* HEADER */}
         <div className="text-center max-w-3xl mx-auto mb-24">
           <span className="inline-block mb-4 px-4 py-2 text-xs font-semibold tracking-widest text-primary uppercase text-ince-blue1 border border-ince-blue1 rounded-full">

@@ -2,8 +2,8 @@ import whyChooseUsImg from '../assets/imgs/whychooseus_img.jpeg'
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-12">
-      <div className="max-w-300 mx-auto px-6">
+    <section className="py-12 bg-linear-to-b from-ince-gray2 to-white">
+      <div className="max-w-5/6 xl:max-w-3/4 mx-auto px-6">
         {/* Grid */}
         <div className="grid md:grid-cols-2 gap-10">
             {/* Header */}

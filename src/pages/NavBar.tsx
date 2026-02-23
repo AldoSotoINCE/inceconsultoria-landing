@@ -9,7 +9,6 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaTiktok } from 'react-icons/fa';
 export default function NavBar() {
     const [open, setOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
-    const waUrl = `https://wa.link/xzp6p0`;
 
     useEffect(() => {
         const onScroll = () => {
@@ -21,10 +20,10 @@ export default function NavBar() {
     },[])
     return (
         <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-gray-50 shadow-lg" : "bg-transparent"}`}>
-            <nav className='w-full mx-ato flex items-center justify-between lg:px-20 py-5 lg:py-4'>
+            <nav className='w-full mx-ato flex items-center justify-between lg:px-20 py-5 lg:py-3'>
                 <div className='px-5'>
                     <a href="#Inicio">
-                        <img src={logo} alt="logo" className='min-w-20 max-w-42'/>
+                        <img src={logo} alt="logo" className='min-w-20 max-w-38'/>
                     </a>
                 </div>
                 <div className='px-10 py-5 hidden lg:flex items-center gap-5 text-gray-900'>
@@ -32,7 +31,7 @@ export default function NavBar() {
                     <a href="#Nosotros"  className='hover:underline decoration-2 decoration-black/70 underline-offset-8'>Nosotros</a>
                     <a href="#Servicios" className='hover:underline decoration-2 decoration-black/70 underline-offset-8'>Servicios</a>
                     <a href="#Proceso"   className='hover:underline decoration-2 decoration-black/70 underline-offset-8'>Proceso de verificación</a>
-                    <a href="#Contacto"  className='px-6 py-2 rounded-lg text-white bg-ince-blue1 hover:opacity-50 transition-opacity duration-300'>Contacto</a>
+                    <a href="#Contacto"  className='px-6 py-2 rounded-lg text-white bg-ince-blue1 hover:opacity-50 transition-opacity duration-300'>Solicita una cotización</a>
                     <div className='flex gap-2'>
                       <div className='flex items-center justify-center gap-2'>
                         <a
@@ -88,14 +87,11 @@ export default function NavBar() {
                         <a href="#Servicios" className="text-xl" onClick={() => setOpen(false)}>Servicios</a>
                         <a href="#Proceso" className="text-xl" onClick={() => setOpen(false)}>Proceso de verificacion</a>
                         <a
-                            href={waUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"    
-                            aria-label="Abrir chat de WhatsApp"
+                            href="#Contacto"
                             className="py-2 text-2xl rounded-lg text-white bg-ince-blue1" 
                             onClick={() => setOpen(false)}
                         >
-                            Contacto
+                            Solicita una cotización
                         </a>
                     </ul>
                     <div className='flex items-center justify-center gap-2'>
