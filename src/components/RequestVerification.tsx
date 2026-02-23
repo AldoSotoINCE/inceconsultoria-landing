@@ -28,6 +28,7 @@ export default function RequestVerification() {
             formData.append("normaAVerificar", data.normaAVerificar);
             formData.append("giroInstalacion", data.giroInstalacion);
             formData.append("descripcion", data.descripcion);
+            formData.append("tienePlanos", data.tienePlanos);
 
             if (data.otroMotivo) {
                 formData.append("otroMotivo", data.otroMotivo);
@@ -406,9 +407,20 @@ export default function RequestVerification() {
                             <input
                                 type="file"
                                 accept=".pdf,.jpg,.jpeg,.png,.dwg"
-                                className="w-full rounded-md file:px-5 file:py-2 file:border file:rounded-l-md bg-gray-100 file:text-white border border-black/15 file:border-gray-600 file:bg-gray-600"
+                                className={
+                                    `w-full rounded-md file:px-5 file:py-2 file:border file:rounded-l-md bg-gray-100 file:text-white border border-black/15 file:border-gray-600 file:bg-gray-600
+                                    ${errors.planos ? "border border-red-600 file:border-red-600 file:bg-red-600" : "border border-black/15 file:border-gray-600 file:bg-gray-600"}
+                                `}
                                 {...register("planos", {
                                         validate: (files: any) => {
+
+                                            const tienePlanosValue = watch("tienePlanos");
+                                            if (tienePlanosValue === "Si") {
+                                                if (!files || files.length === 0) {
+                                                    return "Favor de subir los planos";
+                                                }
+                                            }
+
                                             if (!files || files.length === 0) return true; // es opcional
                                             const file = files[0];
                                             if (file.size > MAX_DWG_FILE_SIZE) return "El archivo debe ser menor o igual a 100 MB.";
@@ -417,6 +429,9 @@ export default function RequestVerification() {
                                         })
                                 }
                             />
+                            <p className={` text-red-600 ${errors.planos ? "visible" : "invisible"}`}>
+                                <span>{String(errors.planos?.message) ?? "Error"}</span>
+                            </p>
                         </div>
                     }
                 </div>
