@@ -17,7 +17,6 @@ export default function RequestVerification() {
     const { register, handleSubmit, watch, formState: {errors} } = useForm<SolicitudVerificacionI>();
     
     const onSubmit = async (data: SolicitudVerificacionI) => {
-        console.log("prueba") 
         try {
             const formData = new FormData();
 
@@ -53,16 +52,21 @@ export default function RequestVerification() {
                 throw new Error("Error al enviar la solicitud");
             }
 
-            console.log("prueba")
             Swal.fire({
                 title: 'Enviado',
                 text: 'Solicitud enviada correctamente',
                 icon: 'success',
-                confirmButtonText: 'Ok'
+                confirmButtonText: 'Ok',
+                confirmButtonColor: "#2467BF"
             })
         } catch (error) {
-            console.error(error);
-            alert("Ocurrió un error al enviar la solicitud");
+            Swal.fire({
+                title: 'Error',
+                text: 'Ocurrio un error al enviar la solicitud, favor de comunicarse via WhatsApp al: 664-410-4450',
+                icon: 'error',
+                confirmButtonText: 'Ok',
+                confirmButtonColor: "#2467BF"
+            })
         }
     };
 
@@ -90,7 +94,13 @@ export default function RequestVerification() {
                             type="text"
                             placeholder="664-000-0000"
                             className={`w-full px-5 py-1.5 rounded-xl border border-black/30 ${errors.celular ? "border-red-500" : "border-black/15"}`}
-                            {...register("celular", { required: "Dato requerido" })}
+                            {...register("celular", {
+                                required: "Dato requerido",
+                                pattern: {
+                                    value: /^(?:\d{10}|\d{3}[- ]?\d{3}[- ]?\d{4})$/,
+                                    message: "Ingresa un número celular válido a 10 dígitos"
+                                }
+                            })}
                         />
                         <p className={` text-red-600 ${errors.celular ? "visible" : "invisible"}`}>
                             <span>{String(errors.celular?.message) ?? "Error"}</span>
@@ -102,7 +112,13 @@ export default function RequestVerification() {
                             type="text"
                             placeholder="email@email.com"
                             className={`w-full px-5 py-1.5 rounded-xl border border-black/30 ${errors.celular ? "border-red-500" : "border-black/15"}`}
-                            {...register("email", { required: "Dato requerido" })}
+                            {...register("email", { 
+                                required: "Dato requerido",
+                                pattern: {
+                                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                                    message: "Ingresa un correo electrónico válido"
+                                }
+                            })}
                         />
                         <p className={` text-red-600 ${errors.email ? "visible" : "invisible"}`}>
                             <span>{String(errors.email?.message) ?? "Error"}</span>
@@ -353,33 +369,36 @@ export default function RequestVerification() {
 
                 {/* planos */}
                 <div>
-                    <p>¿Cuentas con los planos del proyecto/obra a verificar?</p>
+                    <p className={`${errors.tienePlanos ? "text-red-500" : ""}`}>¿Cuentas con los planos del proyecto/obra a verificar?</p>
                     
                     <div className="flex gap-5">
-                        <div className="flex gap-2 text-center">
+                        <div className={`flex gap-2 text-center ${errors.tienePlanos ? "text-red-500" : ""}`}>
                             <input
                                 id="Si"
                                 value={"Si"}
                                 type="radio" 
                                 className="w-4"
-                                {...register("tienePlanos", { required: true })}
+                                {...register("tienePlanos", { required: "Dato obligatorio" })}
                                 onChange={() => setTienePlanos(true)}
                             />
                             <p>Si</p>
                         </div>
 
-                        <div className="flex gap-2 text-center">
+                        <div className={`flex gap-2 text-center ${errors.tienePlanos ? "text-red-500" : ""}`}>
                             <input 
                                 id="No"
                                 value={"No"} 
                                 type="radio" 
                                 className="w-4"
-                                {...register("tienePlanos", { required: true })}
+                                {...register("tienePlanos", { required: "Dato obligatorio" })}
                                 onChange={() => setTienePlanos(false)}
                             />
                             <p>No</p>
                         </div>
                     </div>
+                    <p className={` text-red-600 ${errors.tienePlanos ? "visible" : "invisible"}`}>
+                        <span>{String(errors.tienePlanos?.message) ?? "Error"}</span>
+                    </p>
                         
                     {tienePlanos &&
                         <div className="my-5">
