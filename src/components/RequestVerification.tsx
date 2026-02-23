@@ -5,18 +5,18 @@ import Swal from "sweetalert2";
 import type { SolicitudVerificacionI } from "../interfaces/form.interface";
 import { requestVerificationEmail } from "../api/email";
 
-
 const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10 MB in bytes 
 const MAX_DWG_FILE_SIZE = 100 * 1024 * 1024; // 100 MB in bytes 
-
 
 export default function RequestVerification() {
 
     const [tienePlanos, setTienePlanos] = useState<boolean>(false);
+    const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
 
     const { register, handleSubmit, watch, formState: {errors} } = useForm<SolicitudVerificacionI>();
     
     const onSubmit = async (data: SolicitudVerificacionI) => {
+        setIsSubmitting(true);
         try {
             const formData = new FormData();
 
@@ -68,6 +68,8 @@ export default function RequestVerification() {
                 confirmButtonText: 'Ok',
                 confirmButtonColor: "#2467BF"
             })
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
@@ -436,7 +438,11 @@ export default function RequestVerification() {
                     }
                 </div>
 
-                <button type="submit" className="w-full px-5 py-2.5 rounded-xl text-white bg-ince-blue1 hover:cursor-pointer hover:opacity-60">
+                <button 
+                    type="submit" 
+                    className="w-full px-5 py-2.5 rounded-xl text-white bg-ince-blue1 hover:cursor-pointer hover:opacity-60"
+                    disabled={isSubmitting}
+                >
                     Enviar solicitud de verificación
                 </button>
             </form>
