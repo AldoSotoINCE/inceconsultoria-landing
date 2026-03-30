@@ -110,13 +110,13 @@ export default function RequestVerification() {
                         </p>
                     </div>
                     <div className="flex-1">
-                        <p>Correo electronico</p>
+                        <p>Correo electronico <span className="font-thin">(Opcional)</span></p>
                         <input 
                             type="text"
                             placeholder="email@email.com"
-                            className={`w-full px-5 py-1.5 rounded-xl border border-black/30 ${errors.celular ? "border-red-500" : "border-black/15"}`}
-                            {...register("email", { 
-                                required: "Dato requerido",
+                            className={`w-full px-5 py-1.5 rounded-xl border border-black/30 ${errors.email ? "border-red-500" : "border-black/15"}`}
+                            {...register("email", {
+                                required: false,
                                 pattern: {
                                     value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
                                     message: "Ingresa un correo electrónico válido"
@@ -211,7 +211,7 @@ export default function RequestVerification() {
                             value="NOM-001-SEDE-2012"
                             {...register("normaAVerificar", { required: "Dato obligatorio" })}
                         />
-                        <p className={`${errors.normaAVerificar ? "border-red-500 text-red-500" : ""}`}>NOM-001-SEDE-2012 - Instalaciones electricas</p>
+                        <p className={`${errors.normaAVerificar ? "border-red-500 text-red-500" : ""}`}>Instalaciones electricas</p>
                     </div>
                     
                     <div className="flex gap-2 text-left items-center">
@@ -222,19 +222,9 @@ export default function RequestVerification() {
                             value="NOM-004-SEDG-2004"
                             {...register("normaAVerificar", { required: "Dato obligatorio" })}
                         />
-                        <p className={`${errors.normaAVerificar ? "border-red-500 text-red-500" : ""}`}>NOM-004-SEDG-2004  - Instalaciones GAS LP</p>
+                        <p className={`${errors.normaAVerificar ? "border-red-500 text-red-500" : ""}`}>Instalaciones GAS LP</p>
                     </div>
                     
-                    <div className="flex gap-2 text-left items-center">
-                        <input 
-                            type="radio" 
-                            id="NOM-007-ENER-2014" 
-                            className="w-4"
-                            value="NOM-007-ENER-2014"
-                            {...register("normaAVerificar", { required: "Dato obligatorio" })}
-                        />
-                        <p className={`${errors.normaAVerificar ? "border-red-500 text-red-500" : ""}`}>NOM-007-ENER-2014 - Eficiencia energetica para sistema de alumbrado en edificios no residenciales</p>
-                    </div>
                     {errors.normaAVerificar && (
                         <p className="mt-1 text-red-600">
                             {errors.normaAVerificar.message}
@@ -314,7 +304,7 @@ export default function RequestVerification() {
                         <input 
                             type="radio" 
                             id="otro" 
-                            value="Otro"
+                            value="otro"
                             className="w-4"
                             {...register("giroInstalacion", {required: "Dato obligatorio" })}                        
                         />
